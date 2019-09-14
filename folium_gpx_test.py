@@ -3,7 +3,7 @@ from os.path import isfile, join
 import gpxpy
 import folium
 
-data_path = '../tracks'
+data_path = '../tracks_test'
 data = [f for f in listdir(data_path) if isfile(join(data_path, f))]
 start_lat = 48.1450271619894 
 start_lon = 16.29765455716531
@@ -23,7 +23,7 @@ for activity in data:
             for point in segment.points:
                 points.append(tuple([point.latitude, point.longitude]))
     #fadd lines
-    folium.PolyLine(points, color="red", weight=2.5, opacity=1).add_to(my_map)
+    folium.PolyLine(points, color="red", weight=2.5, opacity=0.7).add_to(my_map)
     points =[]
 
 #ave_lat = sum(p[0] for p in points)/len(points)

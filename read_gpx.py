@@ -30,6 +30,6 @@ for activity in data:
     lat = []
     lon = []
 
-filename = data_path + '/track.png'
-plt.savefig(filename, facecolor = fig.get_facecolor(), bbox_inches='tight', pad_inches=0, dpi=300)
+filename = data_path + 'picture.png'
+plt.savefig(filename, facecolor = fig.get_facecolor(), bbox_inches='tight', pad_inches=0, dpi=600)
 print("Stored file:", filename)
