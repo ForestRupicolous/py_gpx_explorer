@@ -11,7 +11,7 @@ Use testing framework?
 Website
 
 Ideas:
-http://andykee.com/visualizing-strava-tracks-with-python.html
+(/) done http://andykee.com/visualizing-strava-tracks-with-python.html
 https://www.datadependence.com/2016/06/creating-map-visualisations-in-python/
 
 Matplotlib - Basemap
