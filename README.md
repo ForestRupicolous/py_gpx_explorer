@@ -13,6 +13,7 @@ Website
 Ideas:
 (/) done http://andykee.com/visualizing-strava-tracks-with-python.html
 https://www.datadependence.com/2016/06/creating-map-visualisations-in-python/
+https://deparkes.co.uk/2016/06/03/plot-lines-in-folium/
 
 Matplotlib - Basemap
 
