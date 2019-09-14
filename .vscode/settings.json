@@ -1,0 +1,4 @@
+{
+    "python.linting.enabled": true,
+    "python.pythonPath": "/home/martinkorinek/projekte/py_gpx_explorer/gpx_env/bin/python",
+}
