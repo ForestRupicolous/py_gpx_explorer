@@ -3,12 +3,13 @@ from os.path import isfile, join
 import gpxpy
 import folium
 
-data_path = '../tracks_test'
+data_path = '../tracks'
 data = [f for f in listdir(data_path) if isfile(join(data_path, f))]
 start_lat = 48.1450271619894 
 start_lon = 16.29765455716531
 # Load map 
-my_map = folium.Map(location=[start_lat, start_lon], zoom_start=12)
+my_watercolor_map = folium.Map(tiles='Stamen Watercolor', location=[start_lat, start_lon], zoom_start=12)
+my_map = folium.Map(tiles='Stamen Terrain', location=[start_lat, start_lon], zoom_start=12)
 
 points = []
 
@@ -23,19 +24,11 @@ for activity in data:
             for point in segment.points:
                 points.append(tuple([point.latitude, point.longitude]))
     #fadd lines
-    folium.PolyLine(points, color="red", weight=2.5, opacity=0.7).add_to(my_map)
+    folium.PolyLine(points, color="red", weight=2.5, opacity=0.6).add_to(my_map)
+    folium.PolyLine(points, color="darkred", weight=2.7, opacity=0.4).add_to(my_watercolor_map)
     points =[]
-
-#ave_lat = sum(p[0] for p in points)/len(points)
-#ave_lon = sum(p[1] for p in points)/len(points)
-#print(ave_lat,ave_lon)
-#centred on average coordinates
-#my_map.location = [ave_lat, ave_lon]
-
-#add a markers
-#for each in points:  
-#    folium.Marker(each).add_to(my_map)
 
 
 # Save map
-my_map.save("./gpx.html")
+my_watercolor_map.save("./watergpx.html")
+my_map.save("./folium_gpx.html")
